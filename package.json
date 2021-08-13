@@ -1,0 +1,21 @@
+{
+  "name": "chord_finder_api",
+  "version": "1.0.0",
+  "description": "chord finder mobile app bff api rest for chord images returning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Pedro Plasencia (Programación en español)",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chord-illustrator": "^1.2.8",
+    "express": "^4.17.1",
+    "xml-js": "^1.6.11"
+  }
+}
