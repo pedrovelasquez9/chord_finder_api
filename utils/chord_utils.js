@@ -9,7 +9,6 @@ exports.getChordSvg = async (response) => {
   const chordInfo = response;
   const strings = chordInfo.strings.split(" ");
   const chordName = chordInfo.chordName.split(",")[0];
-  //   console.log("STRINGS", strings);
   const fingers = chordInfo.fingering.split(" ");
   let fingering = [];
   let mutedStrings = [];
@@ -23,11 +22,6 @@ exports.getChordSvg = async (response) => {
       mutedStrings.push("no");
     }
   });
-  //   console.log("FINGERING", fingering, mutedStrings.length);
-  if (mutedStrings.length > 6) {
-    mutedStrings.pop();
-  }
-  //   console.log("MUTED STRINGS", mutedStrings.length);
   const svg = ci.make({
     name: chordName,
     mutedStrings,
@@ -35,7 +29,6 @@ exports.getChordSvg = async (response) => {
   });
   let stringSvg = svg.toString();
   let convertedXML = convert.xml2js(stringSvg, { compact: true });
-  //   console.log(convertedXML);
   convertedXML["svg"]["_attributes"]["height"] = "141";
   convertedXML["svg"]["_attributes"] = {
     ...convertedXML["svg"]["_attributes"],

@@ -7,11 +7,8 @@ exports.getChord = async (req, res) => {
   if (req.query.chord) {
     const chordToFind = req.query.chord;
     try {
-      //console.log(chordList.chords);
       const response = chordList.chords[chordToFind];
-      console.log(response);
       if (response && response.length > 0) {
-        console.log(response);
         let chords = response.map((item) => item.chordName.replace(/,/g, ""));
         console.log(chords);
         res.json(chords);
@@ -32,7 +29,7 @@ exports.getChordByName = async (req, res) => {
     try {
       for (const property in chordList.chords) {
         chordList.chords[property].forEach((item) => {
-          if (item.chordName === chordToFind) {
+          if (item.chordName.replace(/,/g, "") === chordToFind) {
             response = item;
           }
         });
