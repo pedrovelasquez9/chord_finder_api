@@ -1,4 +1,5 @@
-const chords = {"A":[
+const chords = {
+  "A":[
     {
       strings: 'X 0 2 2 2 0',
       fingering: 'X X 2 3 4 X',
