@@ -15,6 +15,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "chord-illustrator": "^1.2.9",
+    "dotenv": "^16.0.1",
     "express": "^4.17.1",
     "xml-js": "^1.6.11"
   }
